@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="m3wApp" lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SearchApp</title>
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body ng-controller="w3MainCtrl">
+    <header>
+        <h1 class="text-center">WhoWhatWhere</h1>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li ng-repeat="menu in menuNames | filter:name" id="{{menu}}">
+                                <a href="#/{{menu.name}}"><div class="menutitle">{{menu.name}}</div></a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form class="form-inline pull-right searchposition" name="searchForm" role="search">{{add}}
+                <div class="form-group">
+
+                    <input type="text" id="Search" ng-model="searchForm.add.Search" name="Search" class="form-control" placeholder="I am Looking For..">
+
+                    <span class="help-block" ng-show="searchForm.add.Search.$dirty && searchForm.add.Search.$invalid">
+						<span ng-show="searchForm.add.Search.$error.required" class="text-danger">field is required.</span>
+						</span>
+
+
+                    <div class="form-group">
+                        <input type="text" id="city" class="form-control" placeholder="Where">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" ng-click="update()" class="btn btn-warning form-control"><span class="glyphicon glyphicon-search"></span>  Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <ng-view></ng-view>
+        </div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqrm1LI-8ddEp54fYxIEAP1sF64rc4wMU" async defer></script>
+        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js"></script>-->
+        <script type="text/javascript" src="js/lib/angular.min.js"></script>
+        <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+   
+        <script type="text/javascript" src="js/controllers/viewDataCtrl.js"></script>
+    </div>
+    </body>
+
+</html>
