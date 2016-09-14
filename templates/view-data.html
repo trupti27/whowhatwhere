@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-5 " style="height: 800px; overflow-y: scroll;">
 			<div class="col-md-12 grid item-detail" ng-repeat="item in fetchData" class="item-detail" id="{{ item.id }}" ng-mouseover="gotoMarker($event)">
-				<div class="item-name item-styles">{{$index+1}}.{{item.name}}</div>
+				<div class="item-name item-styles"><a href="{{item.url}}" target="_blank">{{$index+1}}.{{item.name}}</a></div>
 				<div class="col-md-3">
 					<div class="pull-left "><img class="img-circle item-image img-responsive" ng-src="{{item.image}}"/></div>
 				</div>
