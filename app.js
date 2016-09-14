@@ -1,5 +1,5 @@
-var w3App = angular.module("m3wApp", ['ngRoute']);
-w3App.config(['$routeProvider', function ($routeProvider) {
+var myApp = angular.module("firstApp", ['ngRoute']);
+myApp.config(['$routeProvider', function ($routeProvider) {
          $routeProvider
              .when('/', {
                  templateUrl:'templates/default-view.html'
@@ -14,7 +14,7 @@ w3App.config(['$routeProvider', function ($routeProvider) {
              .otherwise({redirectTo: '/'});
      }]);
 
-w3App.controller("w3MainCtrl", function($scope, $location){
+myApp.controller("w3MainCtrl", function($scope, $location){
 	$scope.menuNames = [{name: "TopPics"}, {name: "Food"}, {name: "Coffee"}, {name: "Shopping"}];
 	$scope.data = {model: null};
 	$scope.update = function () {

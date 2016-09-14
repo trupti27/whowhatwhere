@@ -1,3 +1,3 @@
-w3App.controller("defaultCtrl", function($scope, $http){
+myApp.controller("defaultCtrl", function($scope, $http){
 	 
 });

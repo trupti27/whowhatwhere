@@ -1,4 +1,4 @@
-w3App.controller("viewDataCtrl", function ($scope, $http, $routeParams, $window) {
+myApp.controller("viewDataCtrl", function ($scope, $http, $routeParams, $window) {
     $scope.fetchData = [];
     var markers = [],
         itemName = $routeParams.menuName,
