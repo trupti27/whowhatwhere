@@ -22,10 +22,9 @@ w3App.controller("w3MainCtrl", function($scope, $location){
 		$scope.data = [];
 		$scope.data.push(angular.element('#Search').val());
 		$scope.data.push(angular.element('#city').val());
+			if ($scope.data[0] != "" || $scope.data[1] != "") {
+				 	$location.path('/' + $scope.data);
+			}
 
-		if ($scope.data[0] != "Search item" && $scope.data[0] != '') {
-			console.log('', $scope.data);
-			$location.path('/' + $scope.data);
-		}
 	}
 });

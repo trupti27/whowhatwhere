@@ -5,7 +5,6 @@ w3App.controller("viewDataCtrl", function ($scope, $http, $routeParams, $window)
         locations = itemName.split(','),
         city = locations[0],
         item = locations[1];
-console.log('000',city,item);
     if(item==undefined){
         item='london'
     }
@@ -15,12 +14,10 @@ console.log('000',city,item);
         method: 'GET',
         url: '/search?location='+city+'&term=' + item + ''
     }).then(function successCallback(response) {
-        //console.log('search data', response.data);
+
         var data = response.data.businesses;
 
-        console.log('business:', data);
         for (var i = 0; i < data.length; i++) {
-            //console.log(data[i].image_url);
             $scope.fetchData.push(
                 {
                     id: data[i].id,
@@ -39,12 +36,10 @@ console.log('000',city,item);
 
         loadGoogleMarkers();
     }, function errorCallback(response) {
-        console.log('search data error', response);
     });
 
     function loadGoogleMarkers(){
         var locations = $scope.fetchData;
-        console.log('locations', locations);
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
             center: new google.maps.LatLng(-33.92, 151.25),

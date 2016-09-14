@@ -1,10 +1,5 @@
 body{
-    /*background: rgba(0, 0, 0, 0.1);*/
     background-image: url("/bkimg.jpg");
-   /* background-image: linear-gradient(to bottom,
-    rgba(76,175,80,0.9),
-    rgba(139,195,74,0.47)),url("/iimg1.jpg");*/
-
 }
 
 .navbar-default {
@@ -25,7 +20,6 @@ body{
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:active {
-    /* border-bottom: 2px solid #24bcb1;*/
     border:4px solid #24bcb1;
     border-radius: 0px 21px 0px 21px;
     transition: 1s width;
@@ -49,7 +43,6 @@ body{
 }
 
 header{
-    /*background-color:#2a6496;*/
     height:90px;
     margin-top:-20px;
 }
