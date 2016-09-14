@@ -16,13 +16,13 @@ w3App.config(['$routeProvider', function ($routeProvider) {
      }]);
 
 w3App.controller("w3MainCtrl", function($scope, $location){
-	$scope.menuNames = [{name: "Top Pics"}, {name: "Food"}, {name: "Coffee"}, {name: "Shopping"}];
+	$scope.menuNames = [{name: "TopPics"}, {name: "Food"}, {name: "Coffee"}, {name: "Shopping"}];
 	$scope.data = {model: null};
 	$scope.update = function () {
 		$scope.data = [];
 		$scope.data.push(angular.element('#Search').val());
 		$scope.data.push(angular.element('#city').val());
-			if ($scope.data[0] != "" || $scope.data[1] != "") {
+			if ($scope.data[0] != "" && $scope.data[1] != "") {
 				 	$location.path('/' + $scope.data);
 			}
 

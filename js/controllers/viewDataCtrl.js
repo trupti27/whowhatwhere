@@ -3,16 +3,13 @@ w3App.controller("viewDataCtrl", function ($scope, $http, $routeParams, $window)
     var markers = [],
         itemName = $routeParams.menuName,
         locations = itemName.split(','),
-        city = locations[0],
-        item = locations[1];
-    if(item==undefined){
-        item='london'
-    }
+        city = locations[1],
+        item = locations[0];
 
-    $scope.add = '';
+
     $http({
         method: 'GET',
-        url: '/search?location='+city+'&term=' + item + ''
+        url: '/search?location=' + city + '&term=' + item + ''
     }).then(function successCallback(response) {
 
         var data = response.data.businesses;

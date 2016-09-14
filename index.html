@@ -31,7 +31,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li ng-repeat="menu in menuNames | filter:name" id="{{menu}}">
+                            <li ng-repeat="menu in menuNames | filter:name" id="{{menu.id}}">
                                 <a href="#/{{menu.name}}"><div class="menutitle">{{menu.name}}</div></a>
                             </li>
                         </ul>
@@ -46,7 +46,7 @@
 
     <div class="container">
         <div class="row">
-            <form class="form-inline pull-right searchposition" name="searchForm" role="search">{{add}}
+            <form class="form-inline pull-right searchposition" name="searchForm" role="search">
                 <div class="form-group">
 
                     <input type="text" id="Search" ng-model="searchForm.add.Search" name="Search" class="form-control" placeholder="I am Looking For..">
@@ -71,7 +71,6 @@
         </div>
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqrm1LI-8ddEp54fYxIEAP1sF64rc4wMU" async defer></script>
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js"></script>-->
         <script type="text/javascript" src="js/lib/angular.min.js"></script>
         <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
