@@ -2,10 +2,6 @@ var express = require('express'),
 	Yelp = require('yelp'),
     app = express();
 
-
-//app.use(express.static(__dirname + '/' + 'buildRelease'));
-//app.listen(4000);
-//console.log('server is running on 4000');
 app.use(express.static(__dirname ));
 
 var yelp = new Yelp({
@@ -16,7 +12,6 @@ var yelp = new Yelp({
 });
 
 app.get('/search', function(req, res){
-	console.log('params: ', req.query);
 	var query = req.query;
 	yelp.search({ term: query.term, location: query.location })
 			.then(function (data) {
