@@ -8,10 +8,10 @@
     <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" >
 </head>
 
-<body ng-controller="MainCtrl">
+<body ng-controller="mainCtrl">
     <header>
         <h1 class="text-center">WhoWhatWhere</h1>
     </header>
@@ -32,8 +32,6 @@
                                 <a href="#/{{menu.name}}"><div class="menutitle">{{menu.name}}</div></a>
                             </li>
                         </ul>
-
-
                     </div>
 
                 </div>
@@ -51,7 +49,6 @@
                     <span class="help-block" ng-show="searchForm.add.Search.$dirty && searchForm.add.Search.$invalid">
 						<span ng-show="searchForm.add.Search.$error.required" class="text-danger">field is required.</span>
 						</span>
-
 
                     <div class="form-group">
                         <input type="text" id="city" class="form-control" placeholder="Where">
@@ -71,8 +68,10 @@
         <script type="text/javascript" src="js/lib/angular.min.js"></script>
         <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
-   
+
+
         <script type="text/javascript" src="js/controllers/viewDataCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/mainCtrl.js"></script>
     </div>
     </body>
 
