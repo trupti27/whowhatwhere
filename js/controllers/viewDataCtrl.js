@@ -6,7 +6,6 @@ myApp.controller("viewDataCtrl", function ($scope, $http, $routeParams, $window)
         city = locations[1],
         item = locations[0];
 
-
     $http({
         method: 'GET',
         url: '/search?location=' + city + '&term=' + item + ''

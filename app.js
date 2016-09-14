@@ -14,7 +14,7 @@ myApp.config(['$routeProvider', function ($routeProvider) {
              .otherwise({redirectTo: '/'});
      }]);
 
-myApp.controller("w3MainCtrl", function($scope, $location){
+myApp.controller("MainCtrl", function($scope, $location){
 	$scope.menuNames = [{name: "TopPics"}, {name: "Food"}, {name: "Coffee"}, {name: "Shopping"}];
 	$scope.data = {model: null};
 	$scope.update = function () {
