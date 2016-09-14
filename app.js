@@ -1,6 +1,5 @@
 var w3App = angular.module("m3wApp", ['ngRoute']);
 w3App.config(['$routeProvider', function ($routeProvider) {
-	console.log('config');
          $routeProvider
              .when('/', {
                  templateUrl:'templates/default-view.html'
